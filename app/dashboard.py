@@ -286,9 +286,9 @@ with col3:
             "Electronic check", "Mailed check",
             "Bank transfer (automatic)", "Credit card (automatic)"
         ])
-        monthly_charges = st.number_input("Monthly Charges ($)", min_value=18.0, max_value=150.0, value=65.0, step=0.5)
-        total_charges = st.number_input("Total Charges ($)", min_value=0.0, max_value=10000.0,
-                                         value=float(round(monthly_charges * max(tenure, 1), 2)), step=1.0)
+        monthly_charges = st.number_input("Monthly Charges (₹)", min_value=18.0, max_value=150.0, value=65.0, step=0.5)
+total_charges = st.number_input("Total Charges (₹)", min_value=0.0, max_value=10000.0,
+                                 value=float(round(monthly_charges * max(tenure, 1), 2)), step=1.0)
 
 st.write("")
 predict_clicked = st.button("▸  RUN SCAN", type="primary", use_container_width=True)
