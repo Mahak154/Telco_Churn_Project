@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  churn-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: churn-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  churn-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: churn-dashboard
+    ports:
+      - "8501:8501"
+    depends_on:
+      - churn-api
+    restart: unless-stopped
