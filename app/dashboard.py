@@ -21,7 +21,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.path.join(BASE, "models", "churn_model.joblib")
 ENCODERS_PATH = os.path.join(BASE, "models", "label_encoders.joblib")
 FEATURES_PATH = os.path.join(BASE, "models", "feature_columns.joblib")
-DATA_PATH = os.path.join(BASE, "data", "telco_churn.csv")   # add this file to your repo
+DATA_PATH = os.path.join(BASE, "data", "telco_churn_raw.csv")   # add this file to your repo
 
 st.set_page_config(page_title="Retention Radar", page_icon="◎", layout="wide")
 
